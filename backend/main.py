@@ -52,7 +52,7 @@ def get_material_preview(material: str =Query(...)) -> ClassPreview:
     for row in _specs_by_material[key]:
         siblings.append(row)
 
-    return ClassPreview(Class=key, pipes_in_class=siblings[:5])
+    return ClassPreview(Class=key, pipes_in_class=siblings)
 
 @app.get("/api/pipes/preview", response_model=GroupPreview)
 def get_pipe_preview(pipe: str =Query(...)) -> GroupPreview:
