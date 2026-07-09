@@ -1,0 +1,60 @@
+group_id,pipes,root_pass_butt_process,filler_pass_butt_process,welding_material_root_pass_butt,welding_material_filler_pass_butt,preheat_base,preheat_thk,preheat_above,interpass,pwht_temp,pwht_minhold,hardness,notes
+A1A,"ASTM A106 GR.B, ASTM A672 GR.B60 CL.12, ASTM A672 GR.B60 CL.22, ASTM A672 GR.B60 CL.32",GTAW/SMAW (Note-1),GTAW/SMAW,ER70S-2/E6010,ER70S-2/E7016/E7018,10,25.4,100,,,,,"1. Root pass for single side welding shall be done by GTAW process. 2. For piping sizes 2"" OD and below shall be entirely welded by GTAW process. 3. Preheat temperature of atleast 50�C shall be provided for the first two passes for THK>=12.5mm & <=25mm."
+A2A,"ASTM A106 GR.B, ASTM A672 GR.B60 CL.12",GTAW/SMAW (Note-1),GTAW/SMAW (Note-2),ER70S-2/E6010,ER70S-2/E7016/E7018,10,25.4,100,,595-620�C,1 HR,200 BHN MAX,"1. Root pass single side welding by GTAW. 2. For piping sizes 2"" OD & below entirely welded by GTAW. 3. Preheat >=50�C first two passes 12.5-25mm. 4. PWHT per IBR for wall thickness exceeding 20mm; hardness measured after PWHT. For A22A, B22A, D22A, E22A piping class weld joint, PWHT shall be carried out irrespective of thickness."
+A3A,"ASTM A106 GR.B, API 5L GR.B PSL1, ASTM A672 GR.B60 CL.12, IS-1239, IS-3589 GR.410, ASTM A53 GR.B TYPE S",SMAW,SMAW,E6010,E6013/E7016/E7018,10,25.4,100,,,,-,"1. Preheat >=50�C first two passes for THK>=12.5mm & <=25mm. 2. Threaded joints for J2A piping class shall be made with 1"" PTFE joining tape. This welding chart is applicable only for seal welding, if any, for A92A piping class."
+A4A,"ASTM A333 GR.6, ASTM A671 GR.CC60 CL.32",GTAW,GTAW/SMAW (Note-2),ER80S-Ni1 (Note-1),ER80S-Ni1/E7016-1/E7018-1 (Note-1),10,25.4,100,315�C ,,,200 BHN MAX,"1. All batches of filler wires/electrodes shall be impact tested at -45�C as per latest edition of ASME BPV Section II Part C at site. 2. For piping sizes 2"" OD & below entirely welded by GTAW. 3. Preheat >=50�C first two passes 12.5-25mm."
+B45A,"ASTM A333 GR.6, ASTM A671 GR.CC60 CL.32",GTAW,GTAW/SMAW (Note-2),ER80S-Ni1 (Note-1),ER80S-Ni1/E7016-1/E7018-1 (Note-1),10,25.4,100,315�C ,595-620�C,ASME B31.3,200 BHN MAX,"1. All batches of filler wires/electrodes impact tested at -45�C per ASME BPV Sec II Part C at site. 2. For piping 2"" OD & below entirely GTAW. 3. Preheat >=50�C first two passes 12.5-25mm. 4. PWHT shall be carried out for all weld joints including attachment welds irrespective of thickness."
+A5A,"ASTM A106 GR.B, ASTM A672 GR.B60 CL.32",GTAW,GTAW/SMAW (Note-1),ER70S-2,ER70S-2/E7016/E7018,10,25,100,,595-620�C,ASME B31.3,200 BHN MAX,"1. Welded by GTAW process. 2. Preheat >=50�C first two passes 12.5-<25mm. 3. Groove welds PWHT for pipe wall thk >20mm; if design temp >204�C, thickness <20mm also PWHT. For B58A, A59A, B59A, D59A, E59A: PWHT for ALL pipe wall thicknesses; attachments stress relieved & meet hardness limit. For lines with design temp >204�C, PWHT required for all weld joints irrespective of thickness. 4. Hardness of weldment shall not exceed 200 BHN."
+A11A,"ASTM A106 GR.B, ASTM A672 GR.B60 CL.12",GTAW/SMAW (Note-1),SMAW/GTAW (Note-2),ER70S-2/E6010,E7016/E7018/ER70S-2,10,25,100,,,,200 BHN MAX,1. Root pass single side welding by GTAW. 2. Welded by GTAW process. 3. Preheat >=50�C first two passes 12.5-<25mm. 4. Hardness in the weldment shall not exceed 200 BHN.
+A14A,"ASTM A106 GR.B, ASTM A672 GR.B60 CL.22, ASTM A672 GR.C60 CL.32, ASTM A672 GR.C60 CL.42",GTAW,GTAW/SMAW (Note-1),ER70S-2 (Note-2),ER70S-2/E7016/E7018 (Note-2),10,25,100,,595-620�C,1 HR,200 BHN MAX,"1. For piping sizes 2"" OD & below entirely welded by GTAW. 2. All batches of welding filler materials shall be qualified for CE (MR0103/TM0177 & TM0284) service. 3. Preheat >=50�C first two passes 12.5-<25mm. 4. PWHT for ALL pipe wall thickness; post heat treated hardness of weld and HAZ shall not exceed 200 BHN. Attachments need not be stress relieved provided cross-sectiol hardness controlled <200 BHN, established by procedure qualification on fillet weld."
+A55A,"ASTM A106 GR.B, ASTM A672 GR.B60 CL.32",GTAW,GTAW/SMAW (Note-1),ER70S-2 (Note-2),ER70S-2/E7016/E7018 (Note-2),10,25,100,,595-620�C,1 HR,200 BHN MAX,"1. Welded by GTAW process. 2. All batches of welding filler materials shall be qualified for CE (TM0177 & TM0284) service. 3. Preheat >=50�C first two passes 12.5-<25mm. 4. PWHT for ALL pipe wall thickness; hardness of weld shall not exceed 200 BHN. Attachments need not be stress relieved provided cross-sectiol hardness <200 BHN, established by procedure qualification on fillet weld."
+A46A,"ASTM A333 GR.6, ASTM A671 GR.CC60 CL.32",GTAW,GTAW/SMAW (Note-1),ER80S-Ni1 (Note-2),"ER80S-Ni1/E7016-1/E7018-1 (Note-2,3)",10,25,100,315�C ,595-620�C,1 HR,200 BHN MAX,"1. For piping 2"" OD & below entirely welded by GTAW. 2. All batches of welding filler materials shall be qualified for CE (MR0103/TM0177 & TM0284) service. 3. Nickel content in ER80S-Ni1 shall not exceed 1 wt.%; PQR shall confirm nickel content <1 wt.%. Filler wires/electrodes impact tested at -45�C per ASME BPV Sec II Part C. 4. Preheat >=50�C first two passes 12.5-<25mm. 5. PWHT for ALL pipe wall thickness; hardness of weld shall not exceed 200 BHN. Attachments need not be stress relieved provided cross-sectiol hardness <200 BHN, established by procedure qualification on fillet weld."
+A19A,"ASTM A106 GR.B, ASTM A672 GR.B60 CL.22, ASTM A672 GR.B60 CL.12",GTAW,GTAW/SMAW (Note-1),ER70S-2,ER70S-2/E7016/E7018,10,25,100,,595-620�C,1 HR,200 BHN MAX,2. Preheat >=50�C first two passes 12.5-<25mm. 3. PWHT for ALL pipe wall thickness; hardness of weld shall not exceed 200 BHN. Attachments shall be stress relieved and shall also meet the hardness limit.
+A6D,"ASTM A335 GR.P11, ASTM A691 GR.1.25CR CL.42",GTAW,GTAW/SMAW (Note-1),ER 80 S B 2,E 7018 B 2L,150,,,250-315 ,650-705�C,ASME B31.3,225 BHN Max,"1. For piping 2"" OD & below entirely GTAW. 2. PWHT for ALL wall thicknesses; post heat treated hardness of weld shall not exceed 225 BHN. Attachments shall be stress relieved and shall also meet the hardness limit."
+E2D,"ASTM A335 GR.P11, ASTM A691 GR.1.25CR CL.42",GTAW,GTAW/SMAW (Note-1),ER 80 S B 2,E 8018 B 2,149,,,250-315 ,710-740�C,2 HRS,,2. PWHT for ALL wall thicknesses; post heat treated hardness of weld shall not exceed 225 BHN.
+B65D,"ASTM A335 GR.P11, ASTM A691 GR.1.25CR CL.42",GTAW,GTAW/SMAW (Note-1),ER 80 S B 2,E 8018 B 2,149,,,250-315 ,710-740�C,ASME B31.3,,2. All batches of welding filler materials shall be qualified for CE (MR0103/TM0177 & TM0284) service. 3. PWHT for ALL wall thicknesses; hardness shall not exceed 225 BHN. Attachments shall be stress relieved and shall also meet the hardness limit.
+E51E,"ASTM A335 GR.P22, ASTM A691 GR.2.25CR CL.42",GTAW,GTAW/SMAW,ER 90S-B3L,E9018 B3L,179,,,,675-760�C,ASME B31.3,225 BHN Max,1. Entirely welded by GTAW process. 2. PWHT for ALL wall thicknesses; hardness shall not exceed 225 BHN. Attachments shall be stress relieved and shall also meet the hardness limit.
+A4F,"ASTM A335 GR.P5, ASTM A691 GR.5CR CL.42",GTAW,GTAW/SMAW (Note-1),ER 80S-B6,E8016 B6,180,,,250-315 ,675-760�C,2 HRS,240 BHN Max,"2. Post heating required if weld metal cools below 150�C after welding & before PWHT: heat to 300�C, hold 1hr min, wrap with mineral wool before cooling to room temp. 3. PWHT for ALL wall thicknesses; hardness shall not exceed 241 BHN. Attachments stress relieved & meet hardness limit. Hardness in B25F, E25F weld joint shall not exceed 225 BHN."
+A4G,"ASTM A335 GR.P9, ASTM A691 GR.9CR CL.42",GTAW,GTAW/SMAW (Note-1),ER 80S-B8,E8018 B8L,250-300 ,,,250-315 ,675-760�C,2 HRS,241 BHN Max,"2. Post heating required if weld metal cools below 150�C after welding & before PWHT: heat to 300�C, hold 1hr min, wrap mineral wool before cooling. 3. PWHT for ALL wall thicknesses; hardness shall not exceed 241 BHN. Attachments stress relieved & meet hardness limit."
+A16A,ASTM A335 GR P1,,,,,,,,,,,,
+A16A,ASTM A335 GR P12,,,,,,,,,,,,
+A4F,ASTM A335 GR P21,,,,,,,,,,,,
+A1K,"ASTM A312 TP304, ASTM A358 TP304 CL.1",GTAW,GTAW/SMAW,ER 308L,E 308L,10,,,175,,,,"1. For piping sizes 2"" OD & below shall be entirely welded by GTAW process."
+A6K,"ASTM A312 TP304/304L, ASTM A358 TP304/304L CL.1",GTAW,GTAW/SMAW (Note-1),ER 308L,E 308L,10,,,175,,,,"1. For piping sizes 2"" OD & below entirely GTAW. 2. Ferrite content shall be reported in the PQR and shall be in the range of 3 to 8 FN."
+A2K,"ASTM A312 TP304, ASTM A358 TP304 CL.1",GTAW,GTAW/SMAW,ER 308H,E 308H,10,,,175,,,,"1. For piping sizes 2"" OD & below entirely GTAW. 2. All batches of filler materials shall have guaranteed minimum as-welded impact value of 0.38mm lateral expansion at -196�C at site; all five values shall be over 0.38mm. 3. Ferrite content shall be reported in PQR, range 1 to 8 FN. CRYOGENIC SERVICE."
+A1N,"ASTM A312 TP316/316L, ASTM A358 TP316/316L CL.1",GTAW,GTAW/SMAW,ER 316L,E 316L,10,,,175,,,,"1. For piping sizes 2"" OD & below shall be entirely welded by GTAW process."
+A1Y,"ASTM A312 TP321, ASTM A358 TP321 CL.1",GTAW,GTAW/SMAW (Note-1),ER 321,E 347,10,,,175,,,,"1. For piping sizes 2"" OD & below entirely GTAW. 2. During procedure qualification, weld metal ferrite content shall be measured and shall be in the range of 3-8%."
+A27Y,"ASTM A312 TP321, ASTM A358 TP321 CL.1",GTAW,GTAW/SMAW (Note-1),ER Ni Cu-7,E Ni Cu-7,10,,,,,,,
+A1O,ASTM A268 GR TP405 (12Cr ferritic stainless),,,ER309/ER309L,E309-15/16,10,,,,,,,
+A1O,ASTM A268 GR TP410 (ferritic/martensitic stainless),,,ER410,E410,121,,,204-315 ,680-730 ,,200-250 HB Max,
+A1O,ASTM A268 GR TP430 (ferritic stainless),,,ER430,E430,10,,,,,,,
+A1K,ASTM A312 GR TP304H,,,ER308H,E308H,10,,,175,,,,
+B5M,ASTM A312 GR TP316H,,,ER316H,E316H,10,,,175,,,,
+A6K,ASTM A312 GR TP317,,,ER317,E317,10,,,175,,,,
+A6K,ASTM A312 GR TP317L,,,ER317L,E317L,10,,,175,,,,
+A6K,ASTM A312 GR TP321H,,,ER347,E347,10,,,175,,,,
+A1K,ASTM A312 GR TP309S,,,ER309L,E309L,10,,,175,,,,
+A1K,ASTM A312 GR TP310S,,,ER310,E310,10,,,175,,,,
+B27M,"ASTM A312 TP347, ASTM A358 TP347 CL.1, ASTM A312 TP347H",GTAW,GTAW/SMAW (Note-1),ER347,E347,10,,,175,,,,"1. For piping 2"" OD & below entirely GTAW. 2. During procedure qualification, weld metal ferrite content shall be measured and shall be in the range of 5-10 Ferrite Number."
+A27Q,"ASTM B165 ANNLD (UNS N04400), ASTM B725 ANNLD (UNS N04400)",GTAW,GTAW/SMAW,ER Ni Cu-7,E Ni Cu-7,10,,,,,,,"1. For piping sizes 2"" OD & below shall be entirely welded by GTAW process. NOTE: card heading duplicates ""A27Y"" from page 27 but covers Monel 400 (UNS N04400) — a different alloy; confirm actual class code against the PMS."
+D50Q,ASTM B423 (UNS N08825),GTAW,GTAW/SMAW (Note-1),ER Ni Cr-3,E Ni Cr Mo-3,10,,,,,,,"1. For piping sizes 2"" OD & below shall be entirely welded by GTAW process."
+D51Q,"ASTM B444 (UNS N06625) GR.1, ASTM B474 (UNS N06625) GR.1",GTAW,GTAW/SMAW (Note-1),ERNiCrMo-3,E NiCrMo-3,10,,,,,,,"1. For piping sizes 2"" OD & below shall be entirely welded by GTAW process."
+D50Q,"ASTM B167 (UNS N06600), ASTM B517 (UNS N06600) - Inconel 600 (Ni-Cr-Fe)",,,"ER NiCr-3
+ER NiCrFe-5
+ER NiCrFe-6
+ER NiFeCr-1
+ER NiFeCr-2","E NiCrFe-2
+E NiCrFe-3
+E NiCrFe-1
+E NiCrFe-4
+E NiCrFe-7",10,,,,,,,
+D50Q,ASTM B166/B167 (UNS N06617) - Inconel 617 (Ni-Cr-Co-Mo),,,ERNiCrCoMo-1,E NiCrCoMo-1,10,,,,,,,
+D50Q,"ASTM B407 (UNS N08800), ASTM B514 (UNS N08800) - Incoloy 800 (Ni-Cr-Fe)",,,ER Ni Cr-3/ER Ni Cr Mo-3,E Ni Cr Fe-2/E Ni Cr Mo-3,10,,,,,,,
+D50Q,UNS N08810 - Incoloy 800H (Ni-Cr-Fe),,,ER Ni Cr-3/ER Ni Cr Mo-3,E Ni Cr Fe-2/E Ni Cr Mo-3,10,,,,,,,
+D50Q,UNS N08811 - Incoloy 800HT (Ni-Cr-Fe),,,ER Ni Cr-3/ER Ni Cr Mo-3,E Ni Cr Fe-2/E Ni Cr Mo-3,10,,,,,,,
+D51Q,UNS N10276 - Hastelloy C-276 (Ni-Cr-Mo),,,ERNiCrMo-4,ENiCrMo-4,10,,,,,,,
+D52Q,UNS S32101 - Lean Duplex LDX 2101,,,ER2209,,10,,,150,,,,
+D53Q,UNS S31803 - Standard 22% Cr Duplex 2205,,,ER2209,E2209-15/16,10,,,150,,,,
+D54Q,UNS S32550 - 25% Cr Duplex 255,,,ER2594,,10,,,150,,,,
+D55Q,UNS S32750 - Super Duplex 2507,,,ER2594,E2594,10,,,150,,,,
+D56Q,UNS S32707 - Hyper Duplex SAF 2707,,,ER2594,,10,,,150,,,,
