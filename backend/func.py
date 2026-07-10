@@ -60,14 +60,14 @@ def load_data()->None:
                 id=raw["group_id"][1:-1],
                 root_pass_butt_process=(raw.get("root_pass_butt_process") or "").strip(),
                 filler_pass_butt_process=(raw.get("filler_pass_butt_process") or "").strip(),
-                welding_material_butt_rootpass=(raw.get("welding_material_butt_rootpass") or "").strip(),
-                welding_material_butt_fillerpass=(raw.get("welding_material_butt_fillerpass") or "").strip(),
+                welding_material_butt_rootpass=(raw.get("welding_material_root_pass_butt") or "").strip(),
+                welding_material_butt_fillerpass=(raw.get("welding_material_filler_pass_butt") or "").strip(),
                 preheat_base=(raw.get("preheat_base") or "").strip(),
                 preheat_thk=(raw.get("preheat_thk") or "").strip(),
                 preheat_above=(raw.get("preheat_above") or "").strip(),
                 interpass=(raw.get("interpass") or "").strip(),
                 pwht_temp=(raw.get("pwht_temp") or "").strip(),
-                pwht_min_hold=(raw.get("pwht_min_hold") or "").strip(),
+                pwht_min_hold=(raw.get("pwht_minhold") or "").strip(),
                 hardness=(raw.get("hardness") or "").strip(),
                 notes=(raw.get("notes") or "").strip(),
             )
@@ -82,3 +82,6 @@ def load_data()->None:
     _all_pipes.sort()
     
 load_data()
+
+for item in _specs_by_pipe["ASTM A335 GR.P5"].values():
+    print(item)

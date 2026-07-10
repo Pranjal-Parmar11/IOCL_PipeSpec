@@ -7,6 +7,64 @@ import {
 } from "./api";
 import "./App.css";
 
+const SERVICE_MAP = {
+  1: "Normal",
+  2: "IBR",
+  3: "Cat-D",
+  4: "LTCS",
+  5: "Hydrogen",
+  6: "High Temperature",
+  7: "Vacuum",
+  8: "Concentrated Sulphuric Acid",
+  9: "Caustic",
+  10: "Offsites",
+  11: "Maximum Hardness 200 BHN",
+  12: "IBR (High CA)",
+  13: "General Service",
+  14: "NACE",
+  15: "Liquid Sulphur",
+  16: "NACE (High Severity)",
+  17: "Chlorine / Dry HCl",
+  18: "Oxygen",
+  19: "Caustic (Stress Relieved)",
+  20: "Jacket for A15A",
+  21: "Reserved",
+  22: "IBR",
+  23: "General Service",
+  24: "Reserved",
+  25: "General Service",
+  26: "Reserved",
+  27: "General Service",
+  28: "Reserved",
+  29: "Reserved",
+  30: "Reserved",
+  31: "Low Temperature (-29°C to 704°C)",
+  32: "Steam Tracing",
+  33: "Underground / Above Ground Fire Water",
+  34: "Reserved",
+  35: "NACE (High CA)",
+  36: "Reserved",
+  37: "SS321-NACE",
+  38: "General Service",
+  39: "Reserved",
+  40: "Reserved",
+  41: "Reserved",
+  42: "Reserved",
+  43: "Reserved",
+  44: "Reserved",
+  45: "Reserved",
+  46: "Reserved",
+  47: "Reserved",
+  48: "Reserved",
+  49: "Reserved",
+  50: "Hydrogen (SS304)",
+  51: "Hydrogen Process + H₂",
+  52: "Hydrogen",
+  53: "Reserved",
+  54: "Hydrogen (High CA)",
+  55: "General Service"
+};
+
 function App() {
   // Application states
   const [selectedPipe, setSelectedPipe] = useState("");
@@ -234,7 +292,7 @@ function App() {
       <header className="top-app-bar">
         <div className="brand">
           <span className="material-symbols-outlined brand-icon">engineering</span>
-          <h1 className="font-headline-md">EIL Pipe Specs</h1>
+          <h1 className="font-headline-md">Pipe Specs</h1>
         </div>
         <button 
           className="settings-btn" 
@@ -392,7 +450,7 @@ function App() {
             {loading ? (
               <div className="loading-container">
                 <div className="spinner"></div>
-                <p className="font-body-lg">Fetching specifications from EIL database...</p>
+                <p className="font-body-lg">Fetching specifications from database...</p>
               </div>
             ) : error ? (
               <div className="error-container">
@@ -428,7 +486,7 @@ function App() {
                           className={`variation-tab ${activeSpecIndex === idx ? "active" : ""}`}
                           onClick={() => setActiveSpecIndex(idx)}
                         >
-                          ID: {spec.id} — {spec.code || `Variation ${idx + 1}`} ({spec.joint_preparation || "ASME"})
+                          {SERVICE_MAP[spec.id] ?? "Unknown Service"}
                         </button>
                       ))}
                     </div>
@@ -447,9 +505,9 @@ function App() {
                           <span className="font-label-caps card-meta-icon">ACTIVE EIL SPECIFICATION</span>
                         </div>
                         <h2 className="font-headline-lg card-title">{selectedPipe}</h2>
-                        <p className="font-body-sm card-subtitle">
+                        {/* <p className="font-body-sm card-subtitle">
                           Applicable Standard Code: <strong>{currentSpec.code || "ASME B31.3"}</strong> | Joint Prep: <strong>{currentSpec.joint_preparation || "Standard"}</strong>
-                        </p>
+                        </p> */}
                       </div>
                       <span className="badge">VERIFIED SPEC</span>
                     </div>
@@ -471,7 +529,7 @@ function App() {
                           <td className="font-label-caps label">Filler Pass (Butt)</td>
                           <td className="font-label-mono value">{currentSpec.filler_pass_butt_process || "N/A"}</td>
                         </tr>
-                        <tr>
+                        {/* <tr>
                           <td className="font-label-caps label">Root Pass (Other)</td>
                           <td className="font-label-mono value">{currentSpec.root_pass_other_process || "N/A"}</td>
                         </tr>
@@ -482,7 +540,7 @@ function App() {
                         <tr>
                           <td className="font-label-caps label">Fillet Socket Joint</td>
                           <td className="font-label-mono value">{currentSpec.fillet_socket_process || "N/A"}</td>
-                        </tr>
+                        </tr> */}
                       </tbody>
                     </table>
                   </div>
@@ -503,7 +561,7 @@ function App() {
                           <td className="font-label-caps label">Butt Fillerpass</td>
                           <td className="font-label-mono value">{currentSpec.welding_material_butt_fillerpass || "N/A"}</td>
                         </tr>
-                        <tr>
+                        {/* <tr>
                           <td className="font-label-caps label">Non-butt Rootpass</td>
                           <td className="font-label-mono value">{currentSpec.welding_material_nobutt_rootpass || "N/A"}</td>
                         </tr>
@@ -514,7 +572,7 @@ function App() {
                         <tr>
                           <td className="font-label-caps label">Socket Joint Material</td>
                           <td className="font-label-mono value">{currentSpec.welding_material_socket_joint || "N/A"}</td>
-                        </tr>
+                        </tr> */}
                       </tbody>
                     </table>
                   </div>
@@ -589,19 +647,19 @@ function App() {
                         <span className="font-label-caps label">Preheat Status</span>
                         <span className="font-label-mono value">{currentSpec.preheat_base ? "Mandatory" : "Standard 10°C"}</span>
                       </div>
-                      <div className="info-item">
+                      {/* <div className="info-item">
                         <span className="font-label-caps label">Code Compliance</span>
                         <span className="font-label-mono value">{currentSpec.code || "ASME B31.3"}</span>
                       </div>
                       <div className="info-item">
                         <span className="font-label-caps label">Joint Preparation</span>
                         <span className="font-label-mono value">{currentSpec.joint_preparation || "Standard"}</span>
-                      </div>
+                      </div> */}
                     </div>
                   </div>
 
                   {/* Weld Visual Reference Card */}
-                  <div className="bento-card half-width">
+                  {/* <div className="bento-card half-width">
                     <div className="weld-ref-card">
                       <img 
                         className="weld-ref-image" 
@@ -612,7 +670,7 @@ function App() {
                         <p className="font-label-caps weld-ref-caption">WELD REFERENCE: V-GROOVE BUTT JOINT</p>
                       </div>
                     </div>
-                  </div>
+                  </div> */}
 
                   {/* Technical Notes Card */}
                   {currentSpec.notes && (
