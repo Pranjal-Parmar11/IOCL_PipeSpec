@@ -25,3 +25,21 @@ class ClassPreview(BaseModel):
 class GroupPreview(BaseModel):
     pipe: str
     pipes_preview: List[str]
+    
+
+
+class MaterialRow(BaseModel):
+    pms: str
+    pipe_class: str
+    type: str
+    facing: str
+    dia_low: float
+    dia_high: float
+    rating: str
+    design_standard: str
+    material_description: str
+
+
+class RecommendationResult(BaseModel):
+    material_description: str
+    confidence_score: float
