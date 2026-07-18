@@ -1,9 +1,17 @@
 from fastapi import FastAPI, HTTPException, Query
 from fastapi.middleware.cors import CORSMiddleware
 from typing import List, Optional
-from func import unique_id
-from func import _specs_by_pipe, _specs_by_material,_all_pipes,_materials
-from pyd_ import SpecRow, GroupPreview, ClassPreview
+from pipe_loader import _specs_by_pipe, _specs_by_material,_all_pipes,_materials
+from pyd_ import SpecRow, GroupPreview, ClassPreview, RecommendationResult
+from recommend import recommend_material
+from pms_loader import (
+    get_unique_pms,
+    get_unique_classes,
+    get_unique_types,
+    get_unique_schedules,
+    get_unique_facings,
+)
+
 
 app = FastAPI(
     title="EIL Specification Service",
@@ -111,3 +119,81 @@ def _resolve_materials(Class: str) -> Optional[str]:
             return existing_key
 
     return None
+
+
+def parse_list_param(params: Optional[List[str]]) -> List[str]:
+    if not params:
+        return []
+    result = []
+    for p in params:
+        if "," in p:
+            result.extend([item.strip() for item in p.split(",") if item.strip()])
+        elif p.strip():
+            result.append(p.strip())
+    return result
+
+
+@app.get("/api/recommend", response_model=List[RecommendationResult])
+def recommend(
+    pms: Optional[str] = Query(None),
+    pipe_class: Optional[str] = Query(None),
+    type: Optional[str] = Query(None),
+    size: Optional[float] = Query(None),
+    schedule_rating: Optional[str] = Query(None),
+    facing: Optional[str] = Query(None),
+) -> List[RecommendationResult]:
+    """
+    Recommend Material Descriptions from PMS CSV data using progressive filtering
+    and confidence scores.
+    """
+    results = recommend_material(
+        pms=pms,
+        pipe_class=pipe_class,
+        type=type,
+        size=size,
+        schedule_rating=schedule_rating,
+        facing=facing
+    )
+    return [RecommendationResult(**res) for res in results]
+
+
+@app.get("/api/pms", response_model=List[str])
+def get_pms_endpoint() -> List[str]:
+    """Return all unique PMS specifications."""
+    return get_unique_pms()
+
+
+@app.get("/api/classes", response_model=List[str])
+def get_classes_endpoint(
+    pms: Optional[str] = Query(None)
+) -> List[str]:
+    """Return all unique Classes, optionally filtered by PMS."""
+    return get_unique_classes(pms)
+
+
+@app.get("/api/types", response_model=List[str])
+def get_types_endpoint(
+    classes: Optional[List[str]] = Query(None)
+) -> List[str]:
+    """Return all unique Types, optionally filtered by Class name(s)."""
+    parsed_classes = parse_list_param(classes)
+    return get_unique_types(parsed_classes)
+
+
+@app.get("/api/schedules", response_model=List[str])
+def get_schedules_endpoint(
+    types: Optional[List[str]] = Query(None)
+) -> List[str]:
+    """Return all unique Schedules/Ratings, optionally filtered by Type name(s)."""
+    parsed_types = parse_list_param(types)
+    return get_unique_schedules(parsed_types)
+
+
+@app.get("/api/facings", response_model=List[str])
+def get_facings_endpoint(
+    types: Optional[List[str]] = Query(None)
+) -> List[str]:
+    """Return all unique Facings, optionally filtered by Type name(s)."""
+    parsed_types = parse_list_param(types)
+    return get_unique_facings(parsed_types)
+
