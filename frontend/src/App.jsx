@@ -5,6 +5,7 @@ import {
   fetchPipeGroupIds,
   fetchSpec,
 } from "./api";
+import RecommendationPanel from "./RecommendationPanel";
 import "./App.css";
 
 const SERVICE_MAP = {
@@ -305,6 +306,7 @@ function App() {
 
       {/* Main Layout Container */}
       <main className="main-container">
+        <div className="left-panel">
 
         {/* Material Class Selection & Search Dropdown */}
         <section className="select-section" ref={materialDropdownRef}>
@@ -591,11 +593,11 @@ function App() {
                         <div className="thermal-details">
                           <p className="font-label-caps label">Preheat Base Temp</p>
                           <p className="font-headline-sm value">
-                            {currentSpec.preheat_base ? `${currentSpec.preheat_base}°C` : "10°C"}
+                            {currentSpec.preheat_base ? `${currentSpec.preheat_base}` : "10"}
                           </p>
                           {currentSpec.preheat_thk && (
                             <p className="font-body-sm label" style={{ marginTop: "2px" }}>
-                              If thickness &gt; {currentSpec.preheat_thk}mm preheat: {currentSpec.preheat_above || "50"}°C
+                              If thickness &gt; {currentSpec.preheat_thk}mm preheat: {currentSpec.preheat_above || "50"}
                             </p>
                           )}
                         </div>
@@ -697,6 +699,10 @@ function App() {
             )}
           </>
         )}
+        </div>
+        <div className="right-sidebar">
+          <RecommendationPanel />
+        </div>
       </main>
 
       {/* Bottom Navigation Bar */}
