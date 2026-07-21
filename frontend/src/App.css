@@ -864,7 +864,6 @@ body {
 
 .collapsible-header {
   cursor: pointer;
-  user-select: none;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -890,6 +889,7 @@ body {
   flex:1;
   gap: var(--space-md);
   background-color: var(--color-surface-container-lowest);
+  overflow-y: auto;
 }
 
 .recommendation-form-group {
@@ -1060,3 +1060,12 @@ body {
   text-align: center;
 }
 
+.result-card.clickable{
+    cursor:pointer;
+    transition:all .2s ease;
+}
+
+.result-card.clickable:hover{
+    transform:translateY(-2px);
+    box-shadow:0 4px 12px rgba(0,0,0,.12);
+}
