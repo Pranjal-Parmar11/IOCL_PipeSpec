@@ -701,7 +701,8 @@ function App() {
         )}
         </div>
         <div className="right-sidebar">
-          <RecommendationPanel />
+          <RecommendationPanel
+            onMaterialSelect={handlePipeSelect} />
         </div>
       </main>
 
