@@ -4,12 +4,12 @@ from pms_loader import _all_rows
 # Binary priority weights for progressive filtering matching:
 # Higher priority matches strictly dominate lower priority matches.
 WEIGHTS = {
-    "pms": 64,
-    "pipe_class": 32,
-    "type": 16,
-    "size": 8,
-    "schedule_rating": 4,
-    "facing": 2,
+    "pms": 56,
+    "pipe_class": 48,
+    "type": 36,
+    "size": 24,
+    "schedule_rating": 32,
+    "facing": 24,
 }
 
 
